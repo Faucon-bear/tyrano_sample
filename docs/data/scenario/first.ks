@@ -1,46 +1,87 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="たまご"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-「走るか寝るかするメロス」[l][r]
+「たまごをあたためよう」[l][r]
 
-メロスは激怒した。[l][r]
-
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
-
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
-
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[link target=*tag_sfire1] →強火 [endlink][r]
+[link target=*tag_wfire1] →弱火 [endlink][r]
 [s]
 
-*tag_sleep
+*tag_sfire1
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
+玉子が焼けてきた
+もうちょっとあっためてみよう　[l][r]
+[link target=*tag_sfire2] →強火 [endlink][r]
+[link target=*tag_wfire2] →弱火 [endlink][r]
+[s]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
+*tag_sfire2
+焼きすぎだ　[r]
 
-【 BAD END 】[l][cm]
+【kogeend】[l][cm]
 
 [jump target=*start]
 
-*tag_run
+*tag_wfire2
+おいしそう　[r]
 
-[bg storage=run.jpg time=500]
+【tamagoyakiend】[l][cm]
+
+[jump target=*start]
+
+*tag_wfire1
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+もうちょっとあっためてみよう　[l][r]
+[link target=*tag_sfire3] →強火 [endlink][r]
+[link target=*tag_wfire3] →弱火 [endlink][r]
+[s]
 
-【 GOOD END 】[l][cm]
+*tag_sfire3
+あさごはんにいいね　[r]
+
+【medamaend】[l][cm]
 
 [jump target=*start]
+
+*tag_wfire3
+生まれたよ！　[r]
+
+【hiyokoend】[l][cm]
+
+もうちょっとあっためてみる？　[l][r]
+[link target=*tag_stop] →しない [endlink][r]
+[link target=*tag_sfire4] →強火 [endlink][r]
+[link target=*tag_wfire4] →弱火 [endlink][r]
+[s]
+
+*tag_stop
+にわとりまでそだててくださいね　[r]
+
+【hiyokoend】[l][cm]
+
+[jump target=*start]
+
+*tag_sfire4
+炭火がいい感じ　[r]
+
+【yakitoriend】[l][cm]
+
+[jump target=*start]
+
+*tag_wfire4
+なぜ？？？　[r]
+不死鳥になりました　[r]
+
+【feonixend】[l][cm]
+
+[jump target=*start]
+
+
+]
